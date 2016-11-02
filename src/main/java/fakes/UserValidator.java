@@ -6,7 +6,7 @@ public class UserValidator {
 
     public boolean doesUsernameExist(String username){
         try {
-            Thread.sleep(4000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

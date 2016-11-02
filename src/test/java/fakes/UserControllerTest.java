@@ -35,6 +35,18 @@ public class UserControllerTest {
         }
 
         @Test
+        public void NO_FAKE_usingMockedUserValidator_returnsOK(){
+            // durch constructor injection einen fake uservalidator mitgeben! prueft nichts!
+            FakeUserValidator userValidator = new FakeUserValidator();
+            UserController ctrl = new UserController(userValidator);
+            User user = new User("kalua");
+
+            Message result = ctrl.create(user);
+
+            Assert.assertEquals(Message.Status.OK, result.status);
+        }
+
+        @Test
         public void MOCKITO_FAKE_withValidInexistingUsername_returnsOK(){
             // 1. Test schneller & wiederholbar machen
             // 2. UserController.create so beinflussen,
@@ -44,7 +56,6 @@ public class UserControllerTest {
 
             when(userValidator.isValidUsername(anyString())).thenReturn(true);
             when(userValidator.doesUsernameExist(anyString())).thenReturn(false);
-
 
             UserController ctrl = new UserController(userValidator);
             User user = new User("kalua");
