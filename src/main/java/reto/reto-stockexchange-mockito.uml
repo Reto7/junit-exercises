@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>reto</OriginalElement>
+  <nodes>
+    <node x="-199.0" y="87.0">reto.StockExchange</node>
+    <node x="171.0" y="81.0">reto.FakeDatabase</node>
+    <node x="-198.0" y="235.0">reto.StockExchangeTest</node>
+    <node x="13.0" y="0.0">reto.WebService</node>
+    <node x="0.0" y="81.0">reto.FakeWebService</node>
+    <node x="184.0" y="0.0">reto.Database</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="reto.FakeWebService" target="reto.WebService">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="reto.FakeDatabase" target="reto.Database">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="142.5" y="132.0" />
+  <SelectedNodes>
+    <node>reto.StockExchangeTest</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
